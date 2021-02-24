@@ -1,0 +1,14 @@
+<h1>編輯任務</h1>
+
+<%= form_for(@task) do |form| %>
+<div class="fields">
+  <%= form.label :title, "任務名稱" %>
+  <%= form.text_field :title %>
+</div>
+<div class="fields">
+  <%= form.label :description, "任務內容" %>
+  <%= form.text_area :description %>
+</div>
+
+<%= form.submit "送出" %>
+<% end %>

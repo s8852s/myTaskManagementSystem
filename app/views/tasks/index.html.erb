@@ -1,0 +1,22 @@
+<h1>任務列表</h1>
+<%= link_to "新增任務", new_task_path %>
+<%= flash["notice"] if flash["notice"] %>
+<table>
+  <thead>
+    <tr>
+      <td>任務名稱</td>
+      <td>任務內容</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasks.each do |task| %>
+    <tr>
+      <td><%= link_to task.title, task_path(task) %></td>
+      <td><%= task.description %></td>
+      <td><%= link_to "編輯任務", edit_task_path(task) %></td>
+      <td><%= link_to "刪除任務", task_path(task), method: 'DELETE', data: {confirm: "確定要刪除嗎?"} %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
