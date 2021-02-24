@@ -24,7 +24,7 @@
 - Rails: `6.0.3.5`
 
 ## ER Diagram
-![ERD](https://i.imgur.com/mQr2O38.jpg)
+![ERD](https://i.imgur.com/T8y3rJJ.jpg)
 
 ## Table Schema
 - users
